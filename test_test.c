@@ -1,9 +1,8 @@
 #include "../libft/libft.h"
-#include "libtestft.h"
+#include "libft_test.h"
 /* ************************************************************************** */
 
 void test_test(void)
 {
 	printf("aaaaa");
-
 }

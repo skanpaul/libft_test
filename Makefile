@@ -16,19 +16,18 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = $(wildcard *.c)
 MAIN = main.c
 
-LIBNAME1 = libft.a
+#LIBNAME1 = libft.a
 
 LIBNAME2 = ft
 LIBPATH2 = ../libft
 
 # **************************************************************************** #
-#all: $(NAME)
+all: $(NAME)
 
-#$(NAME):
-#	gcc $(CFLAGS) -o $(NAME) $(SRC) -L$(LIBPATH2) -l$(LIBNAME2)
+$(NAME): build
 
-all:
-	gcc $(CFLAGS) -o $(NAME) $(SRC) -L$(LIBPATH2) -l$(LIBNAME2)
+build:
+	gcc $(CFLAGS) $(SRC) -L$(LIBPATH2) -l$(LIBNAME2) -o $(NAME)
 
 clean:
 	rm -f *.o

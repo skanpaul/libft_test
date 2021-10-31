@@ -1,5 +1,5 @@
 #include "../libft/libft.h"
-#include "libtestft.h"
+#include "libft_test.h"
 
 #include <ctype.h>
 
