@@ -1,0 +1,32 @@
+#include "../libft/libft.h"
+#include "libtestft.h"
+
+#include <string.h>
+/* ************************************************************************** */
+
+int testft_strlen(void)
+{
+	char text[20];
+
+
+	strcpy(text, "");
+	printf("ft_strlen | string: %s | result: %zu vs %zu:official \n", 
+					text, ft_strlen(text), strlen(text));
+	if(ft_strlen(text) != strlen(text))
+		{
+			printf("\n - - !!! ERROR ERROR ERROR ERROR !!! - -\n\n");
+			return (1);
+		}
+
+	strcpy(text, "bonjour");
+	printf("ft_strlen | string: %s | result: %zu vs %zu:official \n", 
+					text, ft_strlen(text), strlen(text));
+	if(ft_strlen(text) != strlen(text))
+		{
+			printf("\n - - !!! ERROR ERROR ERROR ERROR !!! - -\n\n");
+			return (1);
+		}
+
+
+	return (0);
+}
