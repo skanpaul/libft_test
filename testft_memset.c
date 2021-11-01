@@ -38,7 +38,7 @@ void testft_memset(void)
 	printf("  result: byte %o | len: %d | pointer: %p | text: %s\n\n", c, length, ptr, text);
 
 	c = 64;
-	length = 21;
+	length = 20;
 	strcpy(text, "le soleil");
 	printf("   given: byte %o | len: %d | pointer: %p | text: %s\n", c, length, ptr, text);
 	ptr = memset(text, c, length);
