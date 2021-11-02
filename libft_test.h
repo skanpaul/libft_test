@@ -13,4 +13,5 @@ int testft_isalnum(void);
 int testft_isascii(void);
 int testft_isprint(void);
 int testft_strlen(void);
-void testft_memset(void);
+void testft_memset(void); //NE RETOURNE PAS D ERREUR
+void testft_bzero(void);
