@@ -5,23 +5,44 @@
 
 /* ************************************************************************** */
 
-int testft_ftbzero(void)
+void testft_bzero(void)
 {
-	// char c;
+	size_t n;
+	char data_1[10];
+	char data_2[10];
+	
+    // TEST 01: -----------------------------------
+	strcpy(data_1, "abcdefghi");
+	strcpy(data_2, "abcdefghi");
+	n = 1;
+	ft_bzero(data_1, n);
+	bzero(data_2, n);
 
-	// c = '0';
-	// while (c <= '9')
-	// {
-	// 	printf("ft_isdigit | number: |%c|, result: |%d vs %d| :official \n", c, 
-	// 			ft_isdigit(c), isdigit(c));
-	// 	c++;
+	// TEST 02: -----------------------------------
+	strcpy(data_1, "abcdefghi");
+	strcpy(data_2, "abcdefghi");
+	n = 1;
+	ft_bzero(data_1, n);
+	bzero(data_2, n);
 
-	// 	if(ft_isdigit(c) != isdigit(c))
-	// 	{
-	// 		printf("\n - - !!! ERROR ERROR ERROR ERROR !!! - -\n\n");
-	// 		return (1);
-	// 	}
-	// }
+	// TEST 03: -----------------------------------
+	strcpy(data_1, "abcdefghi");
+	strcpy(data_2, "abcdefghi");
+	n = 9;
+	ft_bzero(data_1, n);
+	bzero(data_2, n);
 
-	// return (0);
+	// TEST 04: -----------------------------------
+	strcpy(data_1, "abcdefghi");
+	strcpy(data_2, "abcdefghi");
+	n = 10;
+	ft_bzero(data_1, n);
+	bzero(data_2, n);
+
+	// TEST 05: -----------------------------------
+	strcpy(data_1, "abcdefghi");
+	strcpy(data_2, "abcdefghi");
+	n = 11;
+	ft_bzero(data_1, n);
+	bzero(data_2, n);
 }

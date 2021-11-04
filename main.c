@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_memset;
+	the_test = e_bzero;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -41,7 +41,7 @@ int	main(void)
 		case e_isprint: if(testft_isprint()) printf("testft_isprint \n");	break;
 		case e_strlen: if(testft_strlen()) printf("testft_strlen \n");	break;
 		case e_memset: testft_memset(); break;
-		case e_bzero: break;
+		case e_bzero: testft_bzero(); break;
 		case e_memcpy: break;
 		case e_memmove: break;
 		case e_strlcpy: break;
