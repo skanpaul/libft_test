@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "libft.h"
 #include "libft_test.h"
 #include <string.h>
 #include <stdio.h>
@@ -9,6 +9,8 @@ void testft_memset(void)
 	int c;	
 	char text[20];
 	void *ptr;
+
+	ptr = NULL;
 	
 	c = 64;
 	length = 0;

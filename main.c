@@ -9,7 +9,7 @@
 /*   Updated: 2021/10/28 10:10:45 by ski              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft/libft.h"
+#include "libft.h"
 #include "libft_test.h"
 
 /* ************************************************************************** */
@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_memmove;
+	the_test = e_strlcpy;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -44,7 +44,7 @@ int	main(void)
 		case e_bzero: testft_bzero(); break;
 		case e_memcpy: testft_memcpy(); break;
 		case e_memmove: testft_memmove(); break;
-		case e_strlcpy: break;
+		case e_strlcpy: testft_strlcpy(); break;
 		case e_strlcat: break;
 		case e_toupper: break;
 		case e_tolower: break;

@@ -1,18 +1,30 @@
-#include "../libft/libft.h"
+#include "libft.h"
 #include "libft_test.h"
 
+#include <stdio.h>
 #include <string.h>
 /* ************************************************************************** */
 
 void testft_memmove(void)
 {
-	char s[] = {65, 66, 67, 68, 69, 0, 45};
-	char s0[] = { 0,  0,  0,  0,  0,  0, 0};
+	char sResult[] = {64, 65, 66, 67, 68, 0, 45};
+	char sResult2[] = {48, 49, 50, 51, 52, 0, 45};	
 
-	ft_memmove(s0, s, 7);
-	ft_bzero(s0, 7);
-	memmove(s0, s, 7);
+	printf("sizeof sResult : %lu\n", sizeof(sResult));
+	printf("sizeof sResult2: %lu\n", sizeof(sResult2));
+	printf("\n");
+	/* -------------------------------------------------- */
+	printf("pointer sResult   : %p\n", sResult);
+	printf("pointer sResult +1: %p\n", sResult + 1);
+
+	
+	
+	// memmove(sResult + 1, sResult, 2) ;
+	ft_memmove(sResult + 1, sResult, 2) ;
+
+
 }
+
 
 /*
 char s[] = {65, 66, 67, 68, 69, 0, 45};

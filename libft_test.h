@@ -17,3 +17,4 @@ void testft_memset(void);	/* NE RETOURNE PAS D ERREUR */
 void testft_bzero(void);	/* NE RETOURNE PAS D ERREUR */
 void testft_memcpy(void);	/* NE RETOURNE PAS D ERREUR */
 void testft_memmove(void);	/* NE RETOURNE PAS D ERREUR */
+void testft_strlcpy(void);	/* NE RETOURNE PAS D ERREUR */
