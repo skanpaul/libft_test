@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = sorakann
-CFLAGS = -Wall -Wextra -Werror
+CC 		= gcc
+RM		= rm -f
+
+NAME 	= sorakann
+CFLAGS 	= -Wall -Wextra -Werror -pedantic
 
 SRC = $(wildcard *.c)
-MAIN = main.c
-
-#LIBNAME1 = libft.a
 
 LIBNAME2 = ft
 LIBPATH2 = ../libft
@@ -24,18 +24,13 @@ LIBPATH2 = ../libft
 # **************************************************************************** #
 all: $(NAME)
 
-$(NAME): build
-
-build:
+$(NAME): 
 	gcc $(CFLAGS) $(SRC) -L$(LIBPATH2) -l$(LIBNAME2) -o $(NAME)
 
 clean:
-	rm -f *.o
+	$(RM) *.o
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
-
-dall:
-	echo $(SRC)
