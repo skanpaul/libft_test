@@ -1,6 +1,7 @@
-#include "libft_test.h"
+#include "libft.h"
 #include "libft_test.h"
 #include <string.h>
+#include <stdio.h>
 
 void testft_strrchr(void)
 {
@@ -8,17 +9,29 @@ void testft_strrchr(void)
 	char s[] = "tripouille";
 	char s2[] = "ltripouiel";
 
+	printf("texte: %s\n\n", s);
 	c = 't';
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s, c), strrchr(s, c));
 
+	printf("texte: %s\n\n", s);
 	c = 'l';
-
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s, c), strrchr(s, c));
+	
+	printf("texte: %s\n\n", s2);
 	c = 'l';
-
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s2, c), strrchr(s2, c));
+	
+	printf("texte: %s\n\n", s);
 	c = 'z';
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s, c), strrchr(s, c));
 
+	printf("texte: %s\n\n", s);
 	c = 0;
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s, c), strrchr(s, c));
 
-	c = 't' + 256:
+	printf("texte: %s\n\n", s);
+	c = 't' + 256;
+	printf("c: (%#010x) %c (%d) | ft: %p vs %p :official\n", c, c, c, ft_strrchr(s, c), strrchr(s, c));
 
 
 

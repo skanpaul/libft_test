@@ -32,6 +32,7 @@ void	testft_toupper(void);
 void	testft_tolower(void);
 void	testft_strchr(void);
 void	testft_strrchr(void);
+void	testft_strncmp(void);
 
 /* ************************************************************************** */
 #endif
