@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_toupper;
+	the_test = e_strchr;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -47,9 +47,9 @@ int	main(void)
 		case e_strlcpy: testft_strlcpy(); break;
 		case e_strlcat: break;
 		case e_toupper: testft_toupper(); break;
-		case e_tolower: break;
-		case e_strchr: break;
-		case e_strrchr: break;
+		case e_tolower: testft_tolower(); break;
+		case e_strchr: testft_strchr(); break;
+		case e_strrchr: testft_strrchr();break;
 		case e_strncmp: break;
 		case e_memchr: break;
 		case e_memcmp: break;

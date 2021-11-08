@@ -18,6 +18,7 @@ CFLAGS 	= -Wall -Wextra -Werror
 
 SRC 	= $(wildcard *.c)
 SRC_FT 	= $(wildcard ft*.c)
+
 SRC_HD	= libft.h
 FOLDER	= ../libft
 
