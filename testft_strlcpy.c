@@ -14,6 +14,9 @@ void testft_strlcpy(void)
 	char dest_o[10]; 
 	char dest[10]; 
 
+	// strlcpy(dest_o, src, -1);
+
+
 	/* --TEST 1------------------------------------------------------- */
 	memset(dest_o, 'A', 10);
 	memset(dest, 'A', 10);
