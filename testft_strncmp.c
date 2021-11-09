@@ -19,6 +19,10 @@ printf("****************************************************\n");
 	strcpy (text1, "1234");
 	strcpy (text2, "1235");
 
+	printf("sizeof of size_t %zu\n", sizeof(size_t));
+	printf("sizeof of int %zu\n", sizeof(int));
+	printf("sizeof of long %zu\n", sizeof(long));
+
 	n = -1; 	skan_error(text1, text2, n);	
 
 
