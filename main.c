@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_strncmp;
+	the_test = e_strlcpy;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -52,7 +52,7 @@ int	main(void)
 		case e_strrchr:	testft_strrchr(); 	break;
 		case e_strncmp:	testft_strncmp(); 	break;
 		case e_memchr: break;
-		
+
 		case e_memcmp: break;
 		case e_strnstr: break;
 		case e_atoi: break;

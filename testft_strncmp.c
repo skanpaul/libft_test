@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /* ************************************************************************** */
-void skan_error(char *text1, char *text2, size_t n);
+static void skan_error(char *text1, char *text2, size_t n);
 
 /* ************************************************************************** */
 void	testft_strncmp(void)
@@ -108,7 +108,7 @@ printf("****************************************************\n");
 }
 
 /* ************************************************************************** */
-void skan_error(char *text1, char *text2, size_t n)
+static void skan_error(char *text1, char *text2, size_t n)
 {
 	printf("OFFICIAL: text1: %s | text2: %s | n: %zu | return: %d\n", text1, text2, n, strncmp(text1, text2, n));
 	printf("PERSO   : text1: %s | text2: %s | n: %zu | return: %d\n", text1, text2, n, ft_strncmp(text1, text2, n));
