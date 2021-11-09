@@ -7,6 +7,10 @@
 
 void testft_memmove(void)
 {
+	
+	// char chain1[50];
+	// char chain2[50];
+	
 	char sResult[] = {64, 65, 66, 67, 68, 0, 45};
 	char sResult2[] = {48, 49, 50, 51, 52, 0, 45};	
 
@@ -24,8 +28,17 @@ void testft_memmove(void)
 
 
 }
+/* ************************************************************************** */
+// char	src[] = "lorem ipsum dolor sit amet";
+// char	*dest;
 
-
+// else if (arg == 2)
+// {
+// 	if (dest != ft_memmove(dest, "con\0sec\0\0te\0tur", 10))
+// 		write(1, "dest's adress was not returned\n", 31);
+// 	write(1, dest, 22);
+// }
+/* ************************************************************************** */
 /*
 char s[] = {65, 66, 67, 68, 69, 0, 45};
 char s0[] = { 0,  0,  0,  0,  0,  0, 0};
