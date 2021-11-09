@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ski <marvin@42lausanne.ch>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:10:40 by ski               #+#    #+#             */
-/*   Updated: 2021/11/08 14:10:45 by ski              ###   ########.fr       */
+/*   Created: 2021/11/09 11:49:50 by ski               #+#    #+#             */
+/*   Updated: 2021/11/09 11:49:53 by ski              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 /* ************************************************************************** */
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	nn;
+	size_t	j;
+	size_t	dst_len_init;
 
-	if (n == 0)
-		return (0);
-	nn = n - 1;
-	i = 0;
-	while (1)
+	dst_len_init = ft_strlen(dst);
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	if ((dstsize > dst_len_init) && (dstsize - dst_len_init >= 1))
 	{
-		if ((s1[i] != s2[i]) | (s1[i] == '\0') | (s2[i] == '\0') | (i >= nn))
-			break ;
-		i++;
+		j = dst_len_init;
+		i = 0;
+		while (i < (dstsize - dst_len_init - 1))
+		{
+			dst[j + i] = src[i];
+			i++;
+		}
+		dst[j + i] = '\0';
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (dstsize >= dst_len_init)
+		return (ft_strlen(src) + dst_len_init);
+	else
+		return (ft_strlen(src) + dstsize);
 }

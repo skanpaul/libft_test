@@ -27,6 +27,7 @@ void	testft_bzero(void);	/* NE RETOURNE PAS D ERREUR */
 void	testft_memcpy(void);	/* NE RETOURNE PAS D ERREUR */
 void	testft_memmove(void);	/* NE RETOURNE PAS D ERREUR */
 void	testft_strlcpy(void);	/* NE RETOURNE PAS D ERREUR */
+void 	testft_strlcat(void);
 
 void	testft_toupper(void);
 void	testft_tolower(void);
