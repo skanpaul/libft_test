@@ -34,6 +34,7 @@ void	testft_tolower(void);
 void	testft_strchr(void);
 void	testft_strrchr(void);
 void	testft_strncmp(void);
+void	testft_memcmp(void);
 
 /* ************************************************************************** */
 #endif
