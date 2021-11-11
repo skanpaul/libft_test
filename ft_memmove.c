@@ -13,6 +13,36 @@
 
 /* ************************************************************************** */
 
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	int	i;
+// 	char	*ptr_src;
+// 	char	*ptr_dst;
+
+// 	ptr_dst = (char *)dst;
+// 	ptr_src = (char *)src;
+
+// 	if(src >= dst)
+// 	{
+// 		i = 0;
+// 		while (i < (int) len)
+// 		{
+// 			ptr_dst[i] = ptr_src[i];
+// 			i++;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		i = (int)len;
+// 		while (i >= 0)
+// 		{
+// 			ptr_dst[i] = ptr_src[i];
+// 			i--;
+// 		}
+// 	}
+// 	return (dst);
+// }
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int		i;
@@ -35,3 +65,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}		
 	return (dst);
 }
+

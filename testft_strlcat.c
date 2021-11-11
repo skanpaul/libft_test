@@ -11,42 +11,62 @@
 
 void testft_strlcat(void)
 {
-	
-	char	*dest;
+	/* --------------------------------------------------------------------------------- */
+	char	*dst;
+	size_t dstsize;
+	char *src = "DEFGHIJKLM";
 
-	dest = (char *)malloc(sizeof(*dest) * 15);
+	dstsize = 17;
 
-	if (dest == NULL)
-		exit (1);
+	dst = (char *)malloc(sizeof(*dst) * 8); if (dst == NULL) exit (1);
 
-	memset(dest, 0, 15);
-	memset(dest, 'r', 6); 
-	dest[11] = 'a';
-	printf("return = %zu \n", strlcat(dest, "lorem", 15));
-	write(1, "\n", 1); 		//printf
-	write(1, dest, 15);		//printf
-	write(1, "\n", 1); 		//printf
-	
-	memset(dest, 0, 15);
-	memset(dest, 'r', 6); 
-	dest[11] = 'a';
-	printf("return = %zu \n", ft_strlcat(dest, "lorem", 15));	
-	write(1, "\n", 1); 		//printf
-	write(1, dest, 15);		//printf
-	write(1, "\n", 1); 		//printf
+	memset(dst, 0, 8);
+	strcpy(dst, "ABC");
+	printf("return = %zu \n", strlcat(dst, src, dstsize));
+	write(1, "\n", 1); 			//printf
+	write(1, dst, dstsize);		//printf
+	write(1, "\n", 1); 			//printf
 
-	free(dest);
+	memset(dst, 0, 15);
+	strcpy(dst, "ABC");
+	printf("return = %zu \n", ft_strlcat(dst, src, dstsize));	
+	write(1, "\n", 1); 			//printf
+	write(1, dst, dstsize);		//printf
+	write(1, "\n", 1); 			//printf
 
+	free(dst);
 
+	/* --------------------------------------------------------------------------------- */
+	// char	*dst;
 
-	
+	// dst = (char *)malloc(sizeof(*dst) * 15);
+
+	// if (dst == NULL)
+	// 		exit (1);
+
+	// memset(dst, 0, 15);
+	// memset(dst, 'r', 6); 
+	// dst[11] = 'a';
+	// printf("return = %zu \n", strlcat(dst, "lorem", 15));
+	// write(1, "\n", 1); 		//printf
+	// write(1, dst, 15);		//printf
+	// write(1, "\n", 1); 		//printf
+
+	// memset(dst, 0, 15);
+	// memset(dst, 'r', 6); 
+	// dst[11] = 'a';
+	// printf("return = %zu \n", ft_strlcat(dst, "lorem", 15));	
+	// write(1, "\n", 1); 		//printf
+	// write(1, dst, 15);		//printf
+	// write(1, "\n", 1); 		//printf
+	// free(dst);
+
+	/* --------------------------------------------------------------------------------- */
 	// size_t	dstsize;	
 	// char	src[30];
 	// char	dst[30];
-
 	// char *text_s = " juliette";
 	// char *text_d = "roi";	
-
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 0; skan_error(dst, src, dstsize);
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 1; skan_error(dst, src, dstsize);
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 2; skan_error(dst, src, dstsize);
@@ -64,20 +84,7 @@ void testft_strlcat(void)
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 14; skan_error(dst, src, dstsize);
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 15; skan_error(dst, src, dstsize);
 	// strcpy(dst, text_d); strcpy(src, text_s); dstsize = 16; skan_error(dst, src, dstsize);
-
-
-	/* char dest[30]; memset(dest, 0, 30); */
-	/* char * src = (char *)"AAAAAAAAA"; */	
-	/* memset(dest, 'B', 4); */
-	/* 3  ft_strlcat(dest, src, 3) 	== 3 + strlen(src) 	&& !strcmp(dest, "BBBB"))		*/
-
-	/* 4  ft_strlcat(dest, src, 6) 	== 13 				&& !strcmp(dest, "BBBBA"))		*/
-
-	// memset(dst, 0, 30);
-	// memset(dst, 'B', 4); 
-	// strcpy(src, "AAAAAAAAA"); 
-	// dstsize = 3; skan_error(dst, src, dstsize);
-	// dstsize = 6; skan_error(dst, src, dstsize);
+	/* --------------------------------------------------------------------------------- */
 
 }
 
@@ -111,12 +118,16 @@ void testft_strlcat(void)
 // 		printf("------------ !!! !!! STRING NOT THE SAME !!! !!! ------------\n\n");
 // 		exit(1);
 // 	}
-// 	/* ************************************************************************** */
+	
 // }
-	
+
+
+
+
+/* ************************************************************************** */
+	// -----------------------------------------------------------
 	/* char dest[30]; memset(dest, 0, 30); */
-	/* char * src = (char *)"AAAAAAAAA"; */	
-	
+	/* char * src = (char *)"AAAAAAAAA"; */		
 	/* dest[0] = 'B'; */
 	/* 1  ft_strlcat(dest, src, 0) 	== strlen(src) 		&& !strcmp(dest, "B"))			*/
 	
