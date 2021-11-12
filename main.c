@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_memcmp;
+	the_test = e_atoi;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -54,8 +54,8 @@ int	main(void)
 		case e_memchr: break;
 
 		case e_memcmp: testft_memcmp();		break;
-		case e_strnstr: break;
-		case e_atoi: break;
+		case e_strnstr: testft_strnstr();	break;
+		case e_atoi:	testft_atoi();		break;
 		default: break;
 	}
 
