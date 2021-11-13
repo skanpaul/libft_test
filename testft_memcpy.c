@@ -24,11 +24,22 @@ void testft_memcpy(void)
 	ft_memcpy(destination, source, n);
 	memcpy(destination, source, n);
 	// -------------------------------------
-	n = 15;
-	ft_memcpy(destination, source, n);
-	memcpy(destination, source, n);
-	// -------------------------------------
-	n = 16;
-	ft_memcpy(destination, source, n);
-	memcpy(destination, source, n);
+	// n = 15;
+	// ft_memcpy(destination, source, n);
+	// memcpy(destination, source, n);
+	// // -------------------------------------
+	// n = 16;
+	// ft_memcpy(destination, source, n);
+	// memcpy(destination, source, n);
+
+	// ft_memcpy(((void *)0), ((void *)0), 3);
+	n = 3;
+	ft_memcpy(((void *)0), ((void *)0), n);
+	memcpy(((void *)0), ((void *)0), n);
+
+
+
+
+
 }
+
