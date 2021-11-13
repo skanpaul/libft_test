@@ -19,7 +19,7 @@ enum e_test
 	e_isalpha,	e_isdigit,	e_isalnum,	e_isascii,	e_isprint,	e_strlen,
 	e_memset,	e_bzero,	e_memcpy,	e_memmove,	e_strlcpy,	e_strlcat,
 	e_toupper,	e_tolower,	e_strchr,	e_strrchr,	e_strncmp,	e_memchr,
-	e_memcmp,	e_strnstr,	e_atoi
+	e_memcmp,	e_strnstr,	e_atoi, e_calloc, e_strdup
 };
 
 /* ************************************************************************** */
@@ -27,7 +27,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_atoi;
+	the_test = e_calloc;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -46,16 +46,25 @@ int	main(void)
 		case e_memmove:	testft_memmove(); 	break;
 		case e_strlcpy:	testft_strlcpy(); 	break;
 		case e_strlcat:	testft_strlcat();	break;
+
 		case e_toupper:	testft_toupper(); 	break;
 		case e_tolower:	testft_tolower(); 	break;
 		case e_strchr:	testft_strchr(); 	break;
 		case e_strrchr:	testft_strrchr(); 	break;
 		case e_strncmp:	testft_strncmp(); 	break;
 		case e_memchr: break;
-
 		case e_memcmp: testft_memcmp();		break;
 		case e_strnstr: testft_strnstr();	break;
 		case e_atoi:	testft_atoi();		break;
+
+		case e_calloc:	testft_calloc();	break;
+		case e_strdup:	break;
+
+
+
+
+
+
 		default: break;
 	}
 

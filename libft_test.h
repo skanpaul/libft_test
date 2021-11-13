@@ -16,6 +16,7 @@
 /* ************************************************************************** */
 
 void	test_test(void);
+
 int		testft_isalpha(void);
 int		testft_isdigit(void);
 int		testft_isalnum(void);
@@ -23,7 +24,7 @@ int		testft_isascii(void);
 int		testft_isprint(void);
 int		testft_strlen(void);
 void	testft_memset(void);	/* NE RETOURNE PAS D ERREUR */
-void	testft_bzero(void);	/* NE RETOURNE PAS D ERREUR */
+void	testft_bzero(void);		/* NE RETOURNE PAS D ERREUR */
 void	testft_memcpy(void);	/* NE RETOURNE PAS D ERREUR */
 void	testft_memmove(void);	/* NE RETOURNE PAS D ERREUR */
 void	testft_strlcpy(void);	/* NE RETOURNE PAS D ERREUR */
@@ -34,9 +35,13 @@ void	testft_tolower(void);
 void	testft_strchr(void);
 void	testft_strrchr(void);
 void	testft_strncmp(void);
+void	testft_memchr(void);
 void	testft_memcmp(void);
 void	testft_strnstr(void);
 void	testft_atoi(void);
+
+void	testft_calloc(void);
+// void	testft_strdup(void);
 
 /* ************************************************************************** */
 #endif

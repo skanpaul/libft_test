@@ -12,57 +12,58 @@
 #include "libft.h"
 
 /* ************************************************************************** */
-
-// void	*ft_memmove(void *dst, const void *src, size_t len)
-// {
-// 	int	i;
-// 	char	*ptr_src;
-// 	char	*ptr_dst;
-
-// 	ptr_dst = (char *)dst;
-// 	ptr_src = (char *)src;
-
-// 	if(src >= dst)
-// 	{
-// 		i = 0;
-// 		while (i < (int) len)
-// 		{
-// 			ptr_dst[i] = ptr_src[i];
-// 			i++;
-// 		}
-// 	}
-// 	else
-// 	{
-// 		i = (int)len;
-// 		while (i >= 0)
-// 		{
-// 			ptr_dst[i] = ptr_src[i];
-// 			i--;
-// 		}
-// 	}
-// 	return (dst);
-// }
-
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	size_t	len_src;
-	size_t	len_dst;
-	char	*ptr_src;
-	char	*ptr_dst;
+	size_t	i;
 
-	ptr_src = (char *)src;
-	ptr_dst = (char *)dst;
-	len_src = sizeof(ptr_src);
-	len_dst = sizeof(ptr_dst);
-	if (len > len_dst)
-		len = len_dst;
-	i = (int)len - 1;
-	while (i >= 0)
+	if (src < dst)
 	{
-		ptr_dst[i] = ptr_src[i];
-		i--;
-	}		
+		i = len - 1;
+		while (i > 0)
+		{
+			*((char *)dst + i) = *((char *)src + i);
+			i--;
+		}
+		*((char *)dst + i) = *((char *)src + i);
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			*((char *)dst + i) = *((char *)src + i);
+			i++;
+		}
+	}
 	return (dst);
 }
 
+/*
+{
+	size_t i;
+	char *ptr_dst;
+	char *ptr_src;
+	ptr_dst = (char *)dst;
+	ptr_src = (char *)src;
+	if (src < dst)
+	{
+		i = len - 1;
+		while (i > 0)
+		{
+			ptr_dst[i] = ptr_src[i];
+			i--;
+		}
+		ptr_dst[i] = ptr_src[i];
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			ptr_dst[i] = ptr_src[i];
+			i++;
+		}
+	}
+	return (dst);
+}
+*/

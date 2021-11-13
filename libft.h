@@ -15,7 +15,8 @@
 /* ************************************************************************** */
 
 # include <stdio.h>
-/*****************************/
+# include <stdlib.h>
+/* ************************************************************************** */
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -40,11 +41,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 
-void 	*ft_calloc(size_t count, size_t size);
-
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 /* ************************************************************************** */
-int		ft_isspace(int c);
+/* int		ft_isspace(int c); */
 
 /* ************************************************************************** */
 #endif
