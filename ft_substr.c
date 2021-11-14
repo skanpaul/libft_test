@@ -14,12 +14,12 @@
 /* ************************************************************************** */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t j;
-	char *ptr;
+	size_t	j;
+	char	*ptr;
 
-	ptr = (char *) malloc (len * sizeof(char));
+	ptr = (char *) malloc ((len + 1) * sizeof(char));
 	if (ptr == 0)
-		return (0);		
+		return (0);
 	ptr[len - 1] = '\0';
 
 	j = 0;

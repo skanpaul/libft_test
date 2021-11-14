@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 #include "libft_test.h"
+# include "sk_lib.h"
 
 /* ************************************************************************** */
 enum e_test
@@ -32,7 +33,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_memcpy;
+	the_test = e_substr;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -66,10 +67,6 @@ int	main(void)
 		case e_strdup:	break;
 		/* ----------------------------------------*/
 		case e_substr:	testft_substr();	break;
-
-
-
-
 
 		/* ----------------------------------------*/
 		default: break;

@@ -16,7 +16,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
-	if (src < dst)
+	if (dst == NULL && src == NULL)
+		return (0);
+	if ((src < dst) & (len > 0))
 	{
 		i = len - 1;
 		while (i > 0)
@@ -38,7 +40,53 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/*
+// Test code:
+
+// 	char *src = "thanks to @apellicc for this test !\r\n";
+// 	char dst1[0xF0];
+
+// 	int size = strlen(src);
+// 	char *r1 = __builtin___memmove_chk (dst1, 
+// src, size, __builtin_object_size (dst1, 0));
+// 	char *r2 = ft_memmove(dst1, src, size);
+
+// 	if (r1 != r2)
+// 		exit(TEST_FAILED);
+// 	r1 = __builtin___memmove_chk ("", "" - 1, 0, __builtin_object_size ("", 0));
+// 	r2 = ft_memmove("", "" - 1, 0);
+// 	if (r1 != r2)
+// 		exit(TEST_FAILED);
+// 	exit(TEST_SUCCESS);
+
+/* -------------------- GITHUB -------------------------------*/
+// void	*ft_memmove(void *s1, const void *s2, size_t len)
+// {
+// 	unsigned char	*dst;
+// 	unsigned char	*src;
+// 	unsigned int	i;
+
+// 	dst = (unsigned char *)s1;
+// 	src = (unsigned char *)s2;
+// 	i = 0;
+// 	if (dst == NULL && src == NULL)
+// 		return (NULL);
+// 	if (dst < src)
+// 	{
+// 		while (i < len)
+// 		{
+// 			dst[i] = src[i];
+// 			i++;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		while (0 < len--)
+// 			dst[len] = src[len];
+// 	}
+// 	return (dst);
+// }
+
+/* --------------------- CODE LISIBLE ----------------------
 {
 	size_t i;
 	char *ptr_dst;

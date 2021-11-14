@@ -12,6 +12,7 @@
 #ifndef LIBFT_TEST_H
 # define LIBFT_TEST_H
 # include "libft_test.h"
+# include "sk_lib.h"
 
 /* ************************************************************************** */
 
