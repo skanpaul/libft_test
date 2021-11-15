@@ -45,5 +45,6 @@ void	testft_calloc(void);
 // void	testft_strdup(void);
 
 void	testft_substr(void);
+void	testft_strjoin(void);
 /* ************************************************************************** */
 #endif

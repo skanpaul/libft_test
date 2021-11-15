@@ -23,9 +23,9 @@ enum e_test
 	e_toupper,	e_tolower,	e_strchr,	e_strrchr,	e_strncmp,	e_memchr,
 	e_memcmp,	e_strnstr,	e_atoi, 
 
-	e_calloc, e_strdup,
+	e_calloc, 	e_strdup,
 	/* ----------------------------------------*/
-	e_substr
+	e_substr, 	e_strjoin
 };
 
 /* ************************************************************************** */
@@ -33,7 +33,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_substr;
+	the_test = e_strjoin;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -67,6 +67,7 @@ int	main(void)
 		case e_strdup:	break;
 		/* ----------------------------------------*/
 		case e_substr:	testft_substr();	break;
+		case e_strjoin:	testft_strjoin();	break;
 
 		/* ----------------------------------------*/
 		default: break;

@@ -14,36 +14,56 @@
 /* ************************************************************************** */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	j;
-	char	*ptr;
+	size_t	s_len;
+	size_t	new_len;
+	char	*new;
+	size_t	i;
 
-	ptr = (char *) malloc ((len + 1) * sizeof(char));
-	if (ptr == 0)
+	s_len = ft_strlen(s);
+	if (start > s_len)
+		return (ft_strdup("\0"));
+	if (len > s_len)
+		new_len = s_len - start + 1;
+	else
+		new_len = len + 1;
+	if (!s)
 		return (0);
-	ptr[len - 1] = '\0';
-
-	j = 0;
-	while ((s[start + j] != '\0') & (j < len ))
+	new = (char *)malloc(sizeof(char) * new_len);
+	if (!new)
+		return (0);
+	i = 0;
+	while (i < new_len - 1)
 	{
-		ptr[j] = s[start + j];
-		j++;
+		new[i] = s[start + i];
+		i++;
 	}
-	return (ptr);
+	new[i] = '\0';
+	return (new);
 }
 
-/*
+/* char *ft_substr(const char *s, unsigned int start, size_t len)
+{
+	int i;
+	size_t slen;
+	size_t sublen;
+	char *substr;
 
-Description
-Alloue avec malloc(3) et retourne une chaine de caractères issue de la chaine ’s’.
-Cette nouvelle chaine commence à l’index ’start’ et a pour taille maximale ’len’
+	if (!s)
+		return (NULL);
+	i = 0;
+	slen = ft_strlen(s);
 
-Paramètres
-s 		= La chaine de laquelle extraire la nouvelle chaine
-start 	= L’index de début de la nouvelle chaine dans la chaine ’s’.
-len 	= La taille maximale de la nouvelle chaine.
-
-Valeur de retour
-- The nouvelle chaine de caractere. 
-- NULL si l’allocation échoue.
-
-*/
+	if (start > slen)
+		return (ft_strdup("\0"));
+	// sublen = (slen - start) < len ? (slen - start) : len;
+	if (len > slen - start)
+		sublen = slen - start;
+	else
+		sublen = len;
+	if (!(substr = malloc(sizeof(char) * (sublen + 1))))
+		return (NULL);
+	substr[sublen] = '\0';
+	while (sublen--)
+		substr[i++] = s[start++];
+	return (substr);
+} */
