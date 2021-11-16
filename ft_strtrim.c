@@ -12,9 +12,50 @@
 #include "libft.h"
 
 /* ************************************************************************** */
-static int sk_isset(char c, const char *set);
+static int	sk_isset(char c, const char *set);
+
 /* ************************************************************************** */
 char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	s1_len;
+	size_t	new_len;
+	char	*new;
+
+	if (!s1)
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	i = 0;
+	while ((sk_isset(s1[i], set)) & (s1[i] != '\0'))
+		i++;
+	s1_len--;
+	while ((sk_isset(s1[s1_len], set)) & (s1_len > i))
+		s1_len--;
+	new_len = s1_len - i + 1;
+	new = ft_calloc(new_len + 1, sizeof(char));
+	if (!new)
+		return (NULL);
+	ft_memmove(new, s1 + i, new_len);
+	new[new_len] = '\0';
+	return (new);
+}
+
+/* ************************************************************************** */
+static int	sk_isset(char c, const char *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+/* char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t s1_len;
 	size_t i;
@@ -46,19 +87,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_memmove((void *)new, (void *)s1, s1_len + 1);
 
 	return (new);
-}
-
-/* ************************************************************************** */
-static int sk_isset(char c, const char *set)
-{
-	size_t i;
-
-	i = 0;
-	while (set[i] != '\0')
-	{
-		if(c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
+} */

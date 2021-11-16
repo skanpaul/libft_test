@@ -25,7 +25,7 @@ enum e_test
 
 	e_calloc, 	e_strdup,
 	/* ----------------------------------------*/
-	e_substr, 	e_strjoin,	e_strtrim
+	e_substr, 	e_strjoin,	e_strtrim, e_split
 };
 
 /* ************************************************************************** */
@@ -33,7 +33,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_strtrim;
+	the_test = e_split;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -69,6 +69,8 @@ int	main(void)
 		case e_substr:	testft_substr();	break;
 		case e_strjoin:	testft_strjoin();	break;
 		case e_strtrim:	testft_strtrim();	break;
+		case e_split:	testft_split();	break;
+		
 		
 		/* ----------------------------------------*/
 		default: break;
