@@ -12,48 +12,59 @@
 #include "libft.h"
 
 /* ************************************************************************** */
-char *sk_itoa_recursiv(int value, char *str, size_t *str_len, size_t *i);
+char	*sk_itoa_recursiv(long value, int neg, size_t *str_len, size_t *i);
 
 /* ************************************************************************** */
-char 	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	size_t str_len;
-	size_t i;
+	long	n_long;
+	int		neg;
+	char	*str;
+	size_t	str_len;
+	size_t	i;
 
-	str = NULL;
-	
-	str_len = 0;
+	n_long = (long)n;
+	neg = 0;
+	str_len = 1;
 	i = 0;
-	str = sk_itoa_recursiv(n, str, &str_len, &i);
-
+	if (n_long < 0)
+	{
+		n_long *= (-1);
+		neg = 1;
+		str_len++;
+	}
+	str = sk_itoa_recursiv(n_long, neg, &str_len, &i);
+	if (!str)
+		return (NULL);
 	str[str_len] = '\0';
 	return (str);
 }
 
 /* ************************************************************************** */
-char *sk_itoa_recursiv(int value, char *str, size_t *str_len, size_t *i)
+char	*sk_itoa_recursiv(long value, int neg, size_t *str_len, size_t *i)
 {
-	int rest;
+	char	*str;
 
+	str = NULL;
 	if ((0 <= value) & (value <= 9))
 	{
-		if ((*i) == 0)
+		str = (char *) malloc((*str_len + 1) * sizeof(char));
+		if (!str)
+			return (NULL);
+		if (neg == 1)
 		{
-			str = (char *) malloc( (*str_len + 1)  * sizeof(char) );
-			if (!str)
-				return (NULL);
+			str[*i] = '-';
+			(*i)++;
 		}
-		str[*i] = value + '0';
-		(*i)++;
-
 	}
 	else
 	{
 		*str_len += 1;
-		rest = value % 10;
-		str = sk_itoa_recursiv(rest, str, str_len, i);
+		str = sk_itoa_recursiv((value / 10), neg, str_len, i);
+		if (!str)
+			return (NULL);
 	}
+	str[*i] = (value % 10) + '0';
+	(*i)++;
 	return (str);
-
 }

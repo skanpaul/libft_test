@@ -25,7 +25,7 @@ enum e_test
 
 	e_calloc, 	e_strdup,
 	/* ----------------------------------------*/
-	e_substr, 	e_strjoin,	e_strtrim, 	e_split, 	e_itoa
+	e_substr, 	e_strjoin,	e_strtrim, 	e_split, 	e_itoa, 	e_strmapi
 };
 
 /* ************************************************************************** */
@@ -33,7 +33,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_itoa;
+	the_test = e_strmapi;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -71,6 +71,7 @@ int	main(void)
 		case e_strtrim:	testft_strtrim();	break;
 		case e_split:	testft_split();	break;
 		case e_itoa:	testft_itoa();	break;
+		case e_strmapi:	testft_strmapi();	break;
 				
 		/* ----------------------------------------*/
 		default: break;

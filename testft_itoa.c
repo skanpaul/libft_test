@@ -8,7 +8,7 @@ void	testft_itoa(void)
 	char *resultat;
 	int value;
 
-	value = 8341;
+	value = 101;
 
 	resultat = ft_itoa(value);
 	if (!resultat)
