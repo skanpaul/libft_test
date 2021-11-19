@@ -9,9 +9,10 @@ void testft_split(void)
 {
 	char **str_array;
 	char delimiter;
-	char *s = "   le matin il fait beau   ";
+	// char *s = "   le matin il fait beau   ";
+	char *s = "tripouille";
 
-	delimiter = ' ';
+	delimiter = 0;
 	str_array = NULL;
 
 	str_array = ft_split(s, delimiter);
@@ -25,6 +26,10 @@ void testft_split(void)
 	printf("\n");
 	sk_free_stringarray(str_array);
 }
+
+	// tab = ft_split("tripouille", 0);
+	// 7 check(!strcmp(tab[0], "tripouille"));
+	// 8  check(tab[1] == NULL);
 
 /* ************************************************************************** */
 static void sk_free_stringarray(char **strarray)

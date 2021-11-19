@@ -48,5 +48,7 @@ void	testft_substr(void);
 void	testft_strjoin(void);
 void	testft_strtrim(void);
 void	testft_split(void);
+void	testft_itoa(void);
+
 /* ************************************************************************** */
 #endif
