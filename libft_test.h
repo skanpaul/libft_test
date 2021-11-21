@@ -51,5 +51,7 @@ void	testft_split(void);
 void	testft_itoa(void);
 void	testft_strmapi(void);
 
+void	testft_putnbr_fd(void);
+
 /* ************************************************************************** */
 #endif
