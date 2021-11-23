@@ -1,43 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ski <marvin@42lausanne.ch>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 10:08:26 by ski               #+#    #+#             */
-/*   Updated: 2021/11/23 10:08:29 by ski              ###   ########.fr       */
+/*   Created: 2021/11/23 15:54:22 by ski               #+#    #+#             */
+/*   Updated: 2021/11/23 15:54:30 by ski              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 /* ************************************************************************** */
-void	ft_lstadd_front(t_list **alst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((alst != NULL) && (new != NULL))
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		new->next = *alst;
-		*alst = new;
+		lst = lst->next;
 	}
+	return (lst);
 }
-
-// void	ft_lstadd_front_BBB(t_list **alst, t_list *new)
-// {
-// 	size_t i;
-
-// 	if(!alst)
-// 		return ;
-	
-// 	i = 0;	
-// 	while (alst[i] != NULL)
-// 		i++;
-
-// 	while(i > 0)
-// 	{
-// 		alst[i + 1] = 	alst[i];
-// 		i--;
-// 	}
-// 	alst[i + 1] = 	alst[i];
-// 	alst[i] = new;
-// 	new->next = alst[1];
-// }
