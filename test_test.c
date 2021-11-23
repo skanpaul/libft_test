@@ -2,8 +2,15 @@
 #include "libft_test.h"
 #include <stdio.h>
 /* ************************************************************************** */
-
 void test_test(void)
+{
+	printf("\u222F    \n");
+	printf("    \n", 0x222F);
+	printf("\uFB49    \n");
+
+}
+
+/* void test_test(void)
 {
 		char c;
 		unsigned uc;
@@ -32,10 +39,10 @@ void test_test(void)
 
 		c = -1;
 		uc = (unsigned char) c;
-		printf("c: (%#010x) %d (%c) | uc: (%#010x) %d (%c) \n", c, c, c, uc, uc, uc);
+		printf("c: (%#010x) %d (%c) | uc: (%#010x) %d (%c) \n", c, c, c, uc, uc, uc); */
 
 /* ************************************************************************** */
-		printf("\nUNSIGNED CHAR ==> CHAR\n\n");
+/* 		printf("\nUNSIGNED CHAR ==> CHAR\n\n");
 		
 		uc = 0;
 		c = (char)uc;
@@ -59,6 +66,6 @@ void test_test(void)
 
 		uc = 255;
 		c = (char)uc;
-		printf("uc: (%#010x) %d (%c) | c: (%#010x) %d (%c)\n", uc, uc, uc, c, c, c);
+		printf("uc: (%#010x) %d (%c) | c: (%#010x) %d (%c)\n", uc, uc, uc, c, c, c); 
 
-}
+}*/

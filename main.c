@@ -34,7 +34,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_putnbr_fd;
+	the_test = etest;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
