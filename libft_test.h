@@ -43,7 +43,7 @@ void	testft_atoi(void);
 
 void	testft_calloc(void);
 // void	testft_strdup(void);
-
+/* ----------------------------------------*/
 void	testft_substr(void);
 void	testft_strjoin(void);
 void	testft_strtrim(void);
@@ -52,6 +52,9 @@ void	testft_itoa(void);
 void	testft_strmapi(void);
 
 void	testft_putnbr_fd(void);
+
+/* ----------------------------------------*/
+void	testft_lstadd_front(void);
 
 /* ************************************************************************** */
 #endif

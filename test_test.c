@@ -5,7 +5,6 @@
 void test_test(void)
 {
 	printf("\u222F    \n");
-	printf("    \n", 0x222F);
 	printf("\uFB49    \n");
 
 }
