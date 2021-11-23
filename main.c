@@ -30,7 +30,7 @@ enum e_test
 	e_putnbr_fd,
 
 	/* ----------------------------------------*/
-	e_lstadd_front
+	e_lstadd_front,	e_lstadd_back
 
 };
 
@@ -39,7 +39,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_lstadd_front;
+	the_test = e_lstadd_back;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -82,6 +82,8 @@ int	main(void)
 				
 		/* ----------------------------------------*/
 		case e_lstadd_front:	testft_lstadd_front();	break;
+		case e_lstadd_back:		testft_lstadd_back();	break;
+
 
 
 		/* ----------------------------------------*/

@@ -55,6 +55,7 @@ void	testft_putnbr_fd(void);
 
 /* ----------------------------------------*/
 void	testft_lstadd_front(void);
+void	testft_lstadd_back(void);
 
 /* ************************************************************************** */
 #endif
