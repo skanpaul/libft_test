@@ -54,7 +54,10 @@ void	testft_strmapi(void);
 void	testft_putnbr_fd(void);
 
 /* ----------------------------------------*/
+// void	testft_lstnew(void);
 void	testft_lstadd_front(void);
+// void	testft_lstsize(void);
+void	testft_lstlast(void);
 void	testft_lstadd_back(void);
 
 /* ************************************************************************** */
