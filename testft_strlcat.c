@@ -11,30 +11,30 @@
 
 void testft_strlcat(void)
 {
-	/* --------------------------------------------------------------------------------- */
-	char	*dst;
-	size_t dstsize;
-	char *src = "DEFGHIJKLM";
+	// /* --------------------------------------------------------------------------------- */
+	// char	*dst;
+	// size_t dstsize;
+	// char *src = "DEFGHIJKLM";
 
-	dstsize = 17;
+	// dstsize = 17;
 
-	dst = (char *)malloc(sizeof(*dst) * 8); if (dst == NULL) exit (1);
+	// dst = (char *)malloc(sizeof(*dst) * 8); if (dst == NULL) exit (1);
 
-	memset(dst, 0, 8);
-	strcpy(dst, "ABC");
-	printf("return = %zu \n", strlcat(dst, src, dstsize));
-	write(1, "\n", 1); 			//printf
-	write(1, dst, dstsize);		//printf
-	write(1, "\n", 1); 			//printf
+	// memset(dst, 0, 8);
+	// strcpy(dst, "ABC");
+	// printf("return = %zu \n", strlcat(dst, src, dstsize));
+	// write(1, "\n", 1); 			//printf
+	// write(1, dst, dstsize);		//printf
+	// write(1, "\n", 1); 			//printf
 
-	memset(dst, 0, 15);
-	strcpy(dst, "ABC");
-	printf("return = %zu \n", ft_strlcat(dst, src, dstsize));	
-	write(1, "\n", 1); 			//printf
-	write(1, dst, dstsize);		//printf
-	write(1, "\n", 1); 			//printf
+	// memset(dst, 0, 15);
+	// strcpy(dst, "ABC");
+	// printf("return = %zu \n", ft_strlcat(dst, src, dstsize));	
+	// write(1, "\n", 1); 			//printf
+	// write(1, dst, dstsize);		//printf
+	// write(1, "\n", 1); 			//printf
 
-	free(dst);
+	// free(dst);
 
 	/* --------------------------------------------------------------------------------- */
 	// char	*dst;

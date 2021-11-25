@@ -4,7 +4,7 @@
 /* ************************************************************************** */
 void testft_strtrim(void)
 {
-	char *new;
+	// char *new;
 
 	// new = ft_strtrim("   xxxtripouille", " x");
 	// 1  check(!strcmp(s, "tripouille"));
@@ -16,7 +16,7 @@ void testft_strtrim(void)
 	// 3 check(!strcmp(s, "tripouille"));
 	// 4  mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
 
-	new = ft_strtrim("   xxx   xxx", " x");
+	// new = ft_strtrim("   xxx   xxx", " x");
 	// 7 check(!strcmp(s, ""));
 	// 8 mcheck(s, 1); free(s); showLeaks();
 
