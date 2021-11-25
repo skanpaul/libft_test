@@ -59,6 +59,8 @@ void	testft_lstadd_front(void);
 // void	testft_lstsize(void);
 void	testft_lstlast(void);
 void	testft_lstadd_back(void);
+void	testft_lstdelone(void);
+void	testft_lstclear(void);
 
 /* ************************************************************************** */
 #endif

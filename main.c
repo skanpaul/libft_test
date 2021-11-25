@@ -31,7 +31,7 @@ enum e_test
 
 	/* ----------------------------------------*/
 	e_lstnew,	e_lstadd_front,	e_lstsize,	e_lstlast,	
-	e_lstadd_back
+	e_lstadd_back, e_lstdelone, e_lstclear
 
 };
 
@@ -40,7 +40,7 @@ int	main(void)
 {
 	enum e_test the_test;
 
-	the_test = e_lstlast;
+	the_test = e_lstclear;
 
 	printf("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n");
 
@@ -86,8 +86,10 @@ int	main(void)
 		case e_lstadd_front:	testft_lstadd_front();	break;
 
 		// case e_lstsize:			testft_lstsize();	break;
-		case e_lstlast:			testft_lstlast();	break;
+		case e_lstlast:			testft_lstlast();		break;
 		case e_lstadd_back:		testft_lstadd_back();	break;
+		case e_lstdelone:		testft_lstdelone();		break;
+		case e_lstclear:		testft_lstclear();		break;
 
 		/* ----------------------------------------*/
 		default: break;
