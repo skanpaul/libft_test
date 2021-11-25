@@ -61,6 +61,7 @@ void	testft_lstlast(void);
 void	testft_lstadd_back(void);
 void	testft_lstdelone(void);
 void	testft_lstclear(void);
+void	testft_lstmap(void);
 
 /* ************************************************************************** */
 #endif
