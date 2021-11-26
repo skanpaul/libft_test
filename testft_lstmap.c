@@ -34,35 +34,38 @@ void	testft_lstmap(void)
 	// c.content = str_c;
 	// c.next = NULL;
 
-	int tab[] = {0, 1, 2, 3};
 
-	t_list * l =  ft_lstnew(tab);
+	t_list *l = lstnew(strdup(" 1 2 3 "));
 
-	for (int i = 1; i < 4; ++i)
-		ft_lstadd_back(&l, ft_lstnew(tab + i));
+	t_list *ret;
 
-	t_list * m = ft_lstmap(l, addOne, free);
-	t_list * tmp = l;
+	l->next = lstnew(strdup("ss"));
+
+	l->next->next = lstnew(strdup("-_-"));
 	
-	// 1 2 3 4 
-	
-	for (int i = 0; i < 4; ++i)
-	{
-		check(*(int*)tmp->content == i);
-		tmp = tmp->next;
-	}
-	tmp = m;
+	ret = ft_lstmap(l, lstmap_f, ((void *)0));
+
+
+
+
 }
 
-	// int tab[] = {0, 1, 2, 3};
-	// t_list * l =  ft_lstnew(tab);
-	// for (int i = 1; i < 4; ++i)
-	// 	ft_lstadd_back(&l, ft_lstnew(tab + i));
-	// t_list * m = ft_lstmap(l, addOne, free);
-	// t_list * tmp = l;
-	// 1 2 3 4 for (int i = 0; i < 4; ++i)
-	// {
-	// 	check(*(int*)tmp->content == i);
-	// 	tmp = tmp->next;
-	// }
-	// tmp = m;
+//	[crash]: your lstmap does not work with basic input
+//	Test code:
+// 
+// 	t_list *l = lstnew(strdup(" 1 2 3 "));
+// 	t_list *ret;
+// 	l->next = lstnew(strdup("ss"));
+// 	l->next->next = lstnew(strdup("-_-"));
+// 	ret = ft_lstmap(l, lstmap_f, ((void *)0));
+// 
+// 	if 	(		
+//			!strcmp(ret->content, "OK !") 
+//		&& 	!strcmp(ret->next->content, "OK !") 
+//		&& 	!strcmp(ret->next->next->content, "OK !") 
+//		&& 	!strcmp(l->content, " 1 2 3 ") 
+//		&& 	!strcmp(l->next->content, "ss") 
+//		&& 	!strcmp(l->next->next->content, "-_-")
+//		)
+// 		exit(TEST_SUCCESS);
+// 	exit(TEST_FAILED);
